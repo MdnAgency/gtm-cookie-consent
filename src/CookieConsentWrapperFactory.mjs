@@ -123,12 +123,13 @@ export class CookieConsentWrapperFactory {
     }
 
     #setupLocales(wrapper, wrapperConfig) {
-        if ('locales' in wrapperConfig && Array.isArray(wrapperConfig.locales)) {
+        if ('locales' in wrapperConfig) {
             const locales = wrapperConfig.locales;
+            console.log(locales);
             let localeKey;
 
             for (localeKey in locales) {
-                void wrapper.loadTranslations(locales[localeKey]);
+                void wrapper.loadMageTranslations(localeKey, locales[localeKey]);
             }
         }
     }

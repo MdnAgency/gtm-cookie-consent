@@ -172,6 +172,10 @@ export class CookieConsentWrapper {
         return this._dictionary.loadTranslations(locale, url, override);
     }
 
+    loadMageTranslations(locale, url, override = false) {
+        return this._dictionary.loadTranslations(locale, url, override);
+    }
+
     unwrap() {
         if (null === this._cookieConsent) {
             throw new Error('Cookie consent is not created, please call method CookieConsentWrapper.init().');
