@@ -125,7 +125,6 @@ export class CookieConsentWrapperFactory {
     #setupLocales(wrapper, wrapperConfig) {
         if ('locales' in wrapperConfig) {
             const locales = wrapperConfig.locales;
-            console.log(locales);
             let localeKey;
 
             for (localeKey in locales) {
